@@ -1,0 +1,32 @@
+Common Assertions in Cypress
+Here are some of the most commonly used assertions in Cypress:
+1. Visibility and Existence
+•	should('be. visible'): Asserts that the element is currently visible in the DOM.
+o	cy.get('button').should('be.visible');
+•	should('exist'): Asserts that at least one element matching the selector exists in the DOM.
+o	cy.get('input#username').should('exist');
+
+2. Content and Text
+•	should('contain', 'text'): Asserts that the element contains the specified text.
+o	cy.get('h1').should('contain', 'Welcome');
+•	should('have.text', 'expected text'): Asserts that the element has exact text content.
+o	cy.get('button').should('have.text', 'Submit');
+3. Attributes
+•	should('have.attr', 'attributeName', 'expectedValue'): Asserts that the element has a specific attribute with the expected value.
+o	cy.get('input#email').should('have.attr', 'placeholder', 'Enter your email');
+4. Value
+•	should('have.value', 'expected value'): Asserts that an input field has the specified value.
+o	cy.get('input#username').should('have.value', 'myUsername');
+5. State and Interaction
+•	should('be.enabled'): Asserts that the element is currently enabled (not disabled).
+o	cy.get('button').should('be.enabled');
+o	cy.get('button').should('be.disabled');
+6. URL and Navigation
+•	cy.url().should('include', 'partial-url'): Asserts that the current URL includes the expected partial URL.
+o	cy.url().should('include', '/dashboard');
+7.Count
+•	should('have.length', count): Asserts that the number of elements matched by the selector equals the expected count.
+o	cy.get('li').should('have.length', 5);
+Chaining Assertions
+You can chain multiple assertions together to create more specific tests:
+•	cy.get('input#username').should('be.visible') .and('have.attr', 'placeholder', 'Enter your username');
