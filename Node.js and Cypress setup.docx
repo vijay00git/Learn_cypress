@@ -1,4 +1,0 @@
-Download and install the compatible Node.js version:
-  Visit the Node.js website (https://nodejs.org/en/download/) and download the installer for your operating system and architecture.
-Verify the Node.js version:
-•	Open a new terminal or command prompt and run node -v. You should see the newly installed Node.js version.
